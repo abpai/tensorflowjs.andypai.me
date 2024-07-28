@@ -1,0 +1,16 @@
+{
+  "demos": [
+    {
+      "slug": "mnist-autoencoder",
+      "title": "MNIST Autoencoder",
+      "description": "Train an autoencoder on the MNIST dataset.",
+      "image": "https://static.andypai.me/mnist-autoencoder-tensorflowjs.png"
+    },
+    {
+      "slug": "graphing-calculator",
+      "title": "Graphing Calculator & Function Approximation",
+      "description": "Plot a function f(x). Estimate the function using a neural network.",
+      "image": "https://static.andypai.me/graphing-calculator-tensorflowjs.png"
+    }
+  ]
+}

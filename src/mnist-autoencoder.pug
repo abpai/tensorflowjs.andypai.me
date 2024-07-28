@@ -1,0 +1,55 @@
+extends templates/layout
+
+block title
+  title MNIST Autoencoder - TensorFlow.js Demos
+
+block head
+  - const title = "TensorFlow.js Demo: MNIST Autoencoder"
+  - const description = "An MNIST autoencoder that uses TensorFlow.js to compress images to a 49-dimensional latent space and then reconstruct them."
+  - const url = 'https://tensorflow.andypai.me/mnist-autoencoder'
+  meta(name='description' content=description)
+  meta(property='og:description' content=description)
+  meta(property='og:title' content=title)
+  meta(property='og:type' content='website')
+  meta(property='og:url' content=url)
+  meta(name='twitter:card' content='summary_large_image')
+  meta(name='twitter:description' content=description)
+  meta(name='twitter:title' content=title)
+  meta(property='twitter:domain' content='andypai.me')
+  meta(property='twitter:url' content=url)
+
+block prepend content
+  section
+    h1 MNIST Autoencoder
+    div.details
+      p An MNIST autoencoder demo using TensorFlow.js to compress and reconstruct handwritten digit images.
+
+  section.explanation
+    h2 How It Works
+    p This demo showcases a pre-trained autoencoder neural network that compresses MNIST digit images down to a compact latent representation of just 49 dimensions, before reconstructing them. Here's the process:
+    ol
+      li The original 14x14 pixel image (196 dimensions) is fed into the encoder.
+      li The encoder compresses the image to a 49-dimensional latent space representation.
+      li The decoder then attempts to reconstruct the original image from this compact representation.
+      li The result is displayed alongside the original for comparison.
+    p This technique is useful for dimensionality reduction, feature learning, and potentially generating new digit images.
+
+  section.demo
+    section.test
+      h2 Test Set Demonstration
+      p.instructions The demo will cycle through different test images. Watch how well the autoencoder reconstructs various digits.
+      .summary
+        table.table
+          tr
+            th Original Image
+            th Reconstructed Image
+          tr
+            td#original
+            td#reconstructed
+
+    .model
+      h3 Model Architecture
+      p The autoencoder consists of an encoder network that compresses the input, and a decoder network that reconstructs it.
+      #architecture
+
+  script(src='mnist-autoencoder.js' type='module' defer)
