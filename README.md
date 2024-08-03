@@ -1,15 +1,12 @@
 # Tensorflow.js Demos
 
-- [x] [Regression](examples/regression.js)
+- [x] [Regression](examples/linear-regression.js)
 - [x] [Binary Classification](examples/binary-classification.js)
 - [x] [Multi-class Classification](examples/mnist-classification.js)
 - [x] [Autoencoder](examples/mnist-autoencoder.js)
 
 ...more to come
 
-## License
-
-This project is licensed under the MIT License.
 
 ### Installation
 
@@ -52,3 +49,7 @@ $ npm serve
 ```
 
 Serve the `build` directory
+
+## License
+
+This project is licensed under the MIT License.
